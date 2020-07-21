@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
   
   def create
-    @user = User.new(paramas[:user])
+    @user = User.new(user_params)
     if @user.save
       # 保存に成功した場合は、ここに記述した処理が実行されます。
     else
